@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--CONTEXT AND ATTRIBUTES ARE MANAGE IN PROJECT INHERITANCE-->
+<openerp>
+    <data>
+        <!--START VIEWS-->
+        <!-- FORM VIEW-->
+        <record model="ir.ui.view" id="view_form_budget">
+            <field name="name">Budget Inherit</field>
+            <field name="model">budget.core.budget</field>
+            <field name="inherit_id" ref="budget_core.view_form_budget"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//notebook" position="inside">
+                    <page string="Account Code" attrs="{'invisible': [('is_operation', '!=', True)]}">
+                        <field name="account_code_ids"
+                               context="{'default_operation_id': id}"/>
+                    </page>
+                </xpath>
+
+            </field>
+        </record>
+    </data>
+</openerp>

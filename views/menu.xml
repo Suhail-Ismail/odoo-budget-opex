@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<openerp>
+    <data>
+    <!--MENU PARENT-->
+    <menuitem
+        id="menu_opex_top"
+        name="OPEX"
+        sequence="6"/>
+    <!--END MENU PARENT-->
+
+    <!--MENU LEFT-->
+        <menuitem
+            id="menu_contract_left"
+            name="Contract"
+            sequence="1"
+            parent="menu_opex_top"
+            action="budget_contractor.action_contract"/>
+
+        <menuitem
+            id="menu_operation_left"
+            name="Cost Center"
+            sequence="2"
+            parent="menu_opex_top"
+            action="budget_core.action_budget_inherit_operation"/>
+
+        <menuitem
+            id="menu_account_code_left"
+            name="Account Code"
+            sequence="3"
+            parent="menu_opex_top"
+            action="action_account_code"/>
+
+    <!--END MENU LEFT-->
+
+    <!--MENU LEFT-CHILD-->
+    </data>
+</openerp>
