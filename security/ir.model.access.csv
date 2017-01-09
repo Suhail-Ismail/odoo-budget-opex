@@ -1,2 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_budget_opex_budget_opex,budget_opex.budget_opex,model_budget_opex_budget_opex,,1,0,0,0
+access_budget_task_account_code_dependent,budget_opex.task,model_budget_opex_account_code,group_opex_dependent,1,0,0,0
+access_budget_task_account_code_user,budget_opex.task,model_budget_opex_account_code,group_opex_user,1,1,1,0
+access_budget_task_account_code_manager,budget_opex.task,model_budget_opex_account_code,group_opex_manager,1,1,1,1

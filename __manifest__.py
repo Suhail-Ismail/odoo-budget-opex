@@ -3,7 +3,7 @@
     'name': "Operational Expenditure",
     'version': '0.1',
     'summary': 'OPEX Management',
-    'sequence': 3,
+    'sequence': 5,
     'description': """
 Budget Operational Expenditure
 ===========
@@ -33,8 +33,8 @@ Summary
         'budget_contractor'
     ],
     'data': [
-#        'security/budget_capex.xml',
-#        'security/ir.model.access.csv',
+        'security/budget_opex.xml',
+        'security/ir.model.access.csv',
 
         'views/account_code.xml',
 #        'views/task_progress.xml',
