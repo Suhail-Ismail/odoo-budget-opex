@@ -27,6 +27,7 @@ class AccountCode(models.Model):
                                          string='Expenditure Amount')
 
     description = fields.Text(string="Description")
+    grouping = fields.Text(string="Grouping")
     remarks = fields.Text(string="Remarks")
 
     # RELATIONSHIPS

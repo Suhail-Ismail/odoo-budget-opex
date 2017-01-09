@@ -41,6 +41,7 @@
                         <group>
                             <group>
                                 <field name="year"/>
+                                <field name="grouping"/>
                                 <field name="operation_id" context="{'default_is_operation': True}"/>
                                 <field name="expenditure_amount"/>
                             </group>
@@ -52,11 +53,11 @@
                             <field name="description"/>
                             <field name="remarks"/>
                         </group>
-                        <!--<notebook>-->
+                        <notebook>
                             <!--<page string="Account Code">-->
                                 <!--<field name="account_code_ids"/>-->
                             <!--</page>-->
-                        <!--</notebook>-->
+                        </notebook>
                     </sheet>
                     <div class="oe_chatter">
                         <field name="message_follower_ids" widget="mail_followers"/>
