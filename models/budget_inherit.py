@@ -15,9 +15,9 @@ class BudgetInherit(models.Model):
 
     # RELATIONSHIPS
     # ----------------------------------------------------------
-    account_code_ids = fields.One2many('budget.opex.account.code',
-                                       'operation_id',
-                                       string="Account Codes")
+    oear_ids = fields.One2many('budget.opex.oear',
+                               'operation_id',
+                               string="OEAR")
 
     # COMPUTE FIELDS
     # ----------------------------------------------------------

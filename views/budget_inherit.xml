@@ -11,8 +11,8 @@
             <field name="arch" type="xml">
 
                 <xpath expr="//notebook" position="inside">
-                    <page string="Account Code" attrs="{'invisible': [('is_operation', '!=', True)]}">
-                        <field name="account_code_ids"
+                    <page string="OEAR" attrs="{'invisible': [('is_operation', '!=', True)]}">
+                        <field name="oear_ids"
                                context="{'default_operation_id': id}"/>
                     </page>
                 </xpath>

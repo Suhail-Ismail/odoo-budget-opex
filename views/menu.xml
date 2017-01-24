@@ -11,25 +11,51 @@
 
     <!--MENU LEFT-->
         <menuitem
+            id="menu_oear_left"
+            name="OEAR"
+            sequence="1"
+            parent="menu_opex_top"
+            action="action_oear"/>
+
+        <menuitem
             id="menu_contract_left"
             name="Contract"
-            sequence="1"
+            sequence="2"
             parent="menu_opex_top"
             action="budget_contractor.action_contract"/>
 
         <menuitem
             id="menu_operation_left"
-            name="Cost Center"
-            sequence="2"
-            parent="menu_opex_top"
-            action="budget_core.action_budget_inherit_operation"/>
-
-        <menuitem
-            id="menu_account_code_left"
-            name="Account Code"
+            name="OPEX Budget"
             sequence="3"
-            parent="menu_opex_top"
-            action="action_account_code"/>
+            parent="menu_opex_top"/>
+
+            <menuitem
+                id="menu_opex_budget_left"
+                name="CC - AC"
+                sequence="1"
+                parent="menu_operation_left"
+                action="budget_core.action_budget_inherit_operation"/>
+            <menuitem
+                id="menu_opex_budget_plan_left"
+                name="Budget Plan"
+                sequence="2"
+                parent="menu_operation_left"
+                action="budget_core.action_budget_plan_inherit_operation"/>
+
+            <menuitem
+                id="menu_cost_center_left"
+                name="Cost Center"
+                sequence="3"
+                parent="menu_operation_left"
+                action="budget_core.action_cost_center"/>
+
+            <menuitem
+                id="menu_account_code_left"
+                name="Account Code"
+                sequence="4"
+                parent="menu_operation_left"
+                action="budget_core.action_account_code"/>
 
     <!--END MENU LEFT-->
 

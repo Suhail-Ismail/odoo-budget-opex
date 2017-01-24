@@ -36,7 +36,7 @@ Summary
         'security/budget_opex.xml',
         'security/ir.model.access.csv',
 
-        'views/account_code.xml',
+        'views/oear.xml',
 #        'views/task_progress.xml',
 
         'views/budget_inherit.xml',

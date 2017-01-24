@@ -4,9 +4,9 @@
     <data>
         <!--START VIEWS-->
         <!--FORM VIEW-->
-        <record model="ir.ui.view" id="view_form_account_code">
+        <record model="ir.ui.view" id="view_form_oear">
             <field name="name">Account Code</field>
-            <field name="model">budget.opex.account.code</field>
+            <field name="model">budget.opex.oear</field>
             <field name="arch" type="xml">
                 <form string="Account Code">
                     <header>
@@ -35,27 +35,16 @@
                         </div>
                         <div class="oe_title">
                             <h1>
-                                <field name="account_code" default_focus="1" placeholder="Account Code"/>
+                                <field name="request_no" default_focus="1" placeholder="OEAR"/>
                             </h1>
                         </div>
                         <group>
-                            <group>
-                                <field name="year"/>
-                                <field name="grouping"/>
-                                <field name="operation_id" context="{'default_is_operation': True}"/>
-                                <field name="expenditure_amount"/>
-                            </group>
-                            <group>
-                                <field name="start_date"/>
-                            </group>
-                        </group>
-                        <group>
-                            <field name="description"/>
+
                             <field name="remarks"/>
                         </group>
                         <notebook>
                             <!--<page string="Account Code">-->
-                                <!--<field name="account_code_ids"/>-->
+                                <!--<field name="oear_ids"/>-->
                             <!--</page>-->
                         </notebook>
                     </sheet>
@@ -67,14 +56,14 @@
             </field>
         </record>
         <!--CONTRACTOR FORM VIEW-->
-        <record model="ir.ui.view" id="view_tree_account_code">
+        <record model="ir.ui.view" id="view_tree_oear">
             <field name="name">Account Code</field>
-            <field name="model">budget.opex.account.code</field>
+            <field name="model">budget.opex.oear</field>
             <field name="arch" type="xml">
                 <tree decoration-success="state not in ['closed']"
                       decoration-muted="state in ['closed']">
                     <field name="operation_id"/>
-                    <field name="account_code"/>
+                    <field name="request_no"/>
                     <field name="expenditure_amount"/>
                     <field name="state"/>
                 </tree>
@@ -82,12 +71,12 @@
         </record>
         <!--END CONTRACTOR VIEWS-->
         <!--START SEARCH-->
-        <record model="ir.ui.view" id="search_account_code">
+        <record model="ir.ui.view" id="search_oear">
             <field name="name">Account Code Search</field>
-            <field name="model">budget.opex.account.code</field>
+            <field name="model">budget.opex.oear</field>
             <field name="arch" type="xml">
                 <search>
-                    <field name="account_code"/>
+                    <field name="request_no"/>
                     <field name="state"/>
                     <filter
                             name="filter_state"
@@ -100,14 +89,14 @@
 
         <!--START ACTIONS-->
         <!--Account Code Action-->
-        <record model="ir.actions.act_window" id="action_account_code">
-            <field name="name">Account Code</field>
-            <field name="res_model">budget.opex.account.code</field>
+        <record model="ir.actions.act_window" id="action_oear">
+            <field name="name">OEAR</field>
+            <field name="res_model">budget.opex.oear</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,form,pivot,graph</field>
-            <field name="view_id" ref="view_tree_account_code"/>
+            <field name="view_id" ref="view_tree_oear"/>
             <!--<field name="search_view_id" ref="search_budget"/>-->
-            <field name="context">{'form_view_ref': 'budget_capex.view_form_account_code',
+            <field name="context">{'form_view_ref': 'budget_capex.view_form_oear',
                 'search_default_filter_state': 1}
             </field>
         </record>
