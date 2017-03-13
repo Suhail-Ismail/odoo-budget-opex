@@ -30,7 +30,7 @@ Summary
     'website': "https://github.com/mpdevilleres",
     'category': 'TBPC Budget',
     'depends': [
-        'budget_contractor'
+        'budget_core'
     ],
     'data': [
         'security/budget_opex.xml',

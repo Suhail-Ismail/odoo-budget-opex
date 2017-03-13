@@ -5,30 +5,21 @@
         <!--START VIEWS-->
         <!--FORM VIEW-->
         <record model="ir.ui.view" id="view_form_oear">
-            <field name="name">Account Code</field>
+            <field name="name">OEAR</field>
             <field name="model">budget.opex.oear</field>
             <field name="arch" type="xml">
                 <form string="Account Code">
                     <header>
 
                         <!--<button-->
-                                <!--string="Process"-->
-                                <!--name="process"-->
-                                <!--type="workflow"-->
-                                <!--states="draft"/>-->
-                        <!--<button-->
-                                <!--string="Authorize"-->
-                                <!--name="authorize"-->
-                                <!--type="workflow"-->
-                                <!--states="under process"/>-->
-                        <!--<button-->
-                                <!--string="Close"-->
-                                <!--name="close"-->
-                                <!--type="workflow"-->
-                                <!--states="authorized"/>-->
+                        <!--string="Process"-->
+                        <!--name="process"-->
+                        <!--type="workflow"-->
+                        <!--states="draft"/>-->
 
                         <field name="state" widget="statusbar"
                                statusbar_visible="draft,under process,authorized,closed"/>
+
                     </header>
                     <sheet>
                         <div class="oe_button_box" name="button_box">
@@ -39,12 +30,31 @@
                             </h1>
                         </div>
                         <group>
-
-                            <field name="remarks"/>
+                            <field name="title"/>
                         </group>
+                        <group>
+                            <group>
+                                <field name="approval_no"/>
+                                <field name="reference"/>
+                                <field name="budget_type"/>
+                                <field name="received_date"/>
+                                <field name="approval_date"/>
+                            </group>
+                            <group>
+                                <field name="purchase_order"/>
+                                <field name="expenditure_amount"/>
+                                <field name="originator"/>
+                                <field name="operation_id" options="{'no_create': True}"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="justification"/>
+                            <field name="remark"/>
+                        </group>
+
                         <notebook>
                             <!--<page string="Account Code">-->
-                                <!--<field name="oear_ids"/>-->
+                            <!--<field name="oear_ids"/>-->
                             <!--</page>-->
                         </notebook>
                     </sheet>
@@ -64,6 +74,12 @@
                       decoration-muted="state in ['closed']">
                     <field name="operation_id"/>
                     <field name="request_no"/>
+                    <field name="approval_no"/>
+                    <field name="purchase_order"/>
+                    <field name="reference"/>
+                    <field name="budget_type"/>
+                    <field name="received_date"/>
+                    <field name="approval_date"/>
                     <field name="expenditure_amount"/>
                     <field name="state"/>
                 </tree>

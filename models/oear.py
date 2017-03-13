@@ -34,7 +34,7 @@ class Oear(models.Model):
     received_date = fields.Date(string="Received Date")
     approval_date = fields.Date(string="Approval Date")
 
-    remarks = fields.Text(string="Remarks")
+    remark = fields.Text(string="Remarks")
 
     # RELATIONSHIPS
     # ----------------------------------------------------------
