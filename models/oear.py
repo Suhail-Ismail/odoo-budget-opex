@@ -40,6 +40,10 @@ class Oear(models.Model):
     # ----------------------------------------------------------
     company_currency_id = fields.Many2one('res.currency', readonly=True,
                                           default=lambda self: self.env.user.company_id.currency_id)
+
+    section_id = fields.Many2one('budget.enduser.section')
+    sub_section_id = fields.Many2one('budget.enduser.sub.section')
+
     operation_id = fields.Many2one('budget.core.budget',
                                  domain=[('is_operation', '=', True),
                                          ('state', 'not in', ['draft'])],
