@@ -6,7 +6,9 @@
     <menuitem
         id="menu_opex_top"
         name="OPEX"
-        sequence="6"/>
+        sequence="6"
+        groups="base.group_system,budget_core.group_operation_user,budget_core.group_operation_manager"
+    />
     <!--END MENU PARENT-->
 
     <!--MENU LEFT-->
@@ -42,6 +44,12 @@
                 sequence="2"
                 parent="menu_operation_left"
                 action="budget_core.action_budget_plan_inherit_operation"/>
+            <menuitem
+                id="menu_opex_budget_accrual_summary_left"
+                name="Budget Accruals"
+                sequence="2"
+                parent="menu_operation_left"
+                action="budget_core.action_budget_accrual_summary"/>
 
             <menuitem
                 id="menu_cost_center_left"
@@ -56,6 +64,19 @@
                 sequence="4"
                 parent="menu_operation_left"
                 action="budget_core.action_account_code"/>
+
+        <menuitem
+            id="menu_report_left"
+            name="Report"
+            sequence="99"
+            parent="menu_opex_top"/>
+
+            <menuitem
+                id="menu_accrual_left"
+                name="Accruals"
+                sequence="1"
+                parent="menu_report_left"
+                action="budget_core.action_budget_accrual"/>
 
     <!--END MENU LEFT-->
 
