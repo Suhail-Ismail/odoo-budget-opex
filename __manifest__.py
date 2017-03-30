@@ -40,6 +40,7 @@ Summary
 #        'views/task_progress.xml',
 
         'views/budget_inherit.xml',
+        'views/contract_inherit.xml',
 
 #        'workflows/budget_capex_task.xml',
 

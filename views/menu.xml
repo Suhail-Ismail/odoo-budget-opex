@@ -24,7 +24,7 @@
             name="Contract"
             sequence="2"
             parent="menu_opex_top"
-            action="budget_contractor.action_contract"/>
+            action="action_contract"/>
 
         <menuitem
             id="menu_operation_left"
@@ -38,12 +38,6 @@
                 sequence="1"
                 parent="menu_operation_left"
                 action="budget_core.action_budget_inherit_operation"/>
-            <menuitem
-                id="menu_opex_budget_plan_left"
-                name="Budget Plan"
-                sequence="2"
-                parent="menu_operation_left"
-                action="budget_core.action_budget_plan_inherit_operation"/>
             <menuitem
                 id="menu_opex_budget_accrual_summary_left"
                 name="Budget Accruals"
@@ -77,6 +71,13 @@
                 sequence="1"
                 parent="menu_report_left"
                 action="budget_core.action_budget_accrual"/>
+
+            <menuitem
+                id="menu_opex_budget_plan_left"
+                name="Budget Plan"
+                sequence="2"
+                parent="menu_report_left"
+                action="budget_core.action_budget_plan_inherit_operation"/>
 
     <!--END MENU LEFT-->
 
