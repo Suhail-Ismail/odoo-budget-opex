@@ -8,7 +8,7 @@ class Oear(models.Model):
     _name = 'budget.opex.oear'
     _rec_name = 'request_no'
     _description = 'OEAR'
-    _inherit = ['mail.thread']
+    _inherit = ['mail.thread', 'budget.enduser.mixin']
 
     # CHOICES
     # ----------------------------------------------------------
@@ -18,6 +18,7 @@ class Oear(models.Model):
 
     # BASIC FIELDS
     # ----------------------------------------------------------
+    # division_id, section_id, sub_section_id exist in enduser.mixin
     state = fields.Selection(STATES, default='draft')
 
     request_no = fields.Char(string="Request No")
@@ -40,11 +41,6 @@ class Oear(models.Model):
     # ----------------------------------------------------------
     company_currency_id = fields.Many2one('res.currency', readonly=True,
                                           default=lambda self: self.env.user.company_id.currency_id)
-
-    # TODO TRASFERING SECTION TO DIVISION
-    division_id = fields.Many2one('budget.enduser.section', string="Division")
-    section_id = fields.Many2one('budget.enduser.section')
-    sub_section_id = fields.Many2one('budget.enduser.sub.section')
 
     operation_id = fields.Many2one('budget.core.budget',
                                  domain=[('is_operation', '=', True),
