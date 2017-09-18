@@ -27,7 +27,7 @@ class Oear(models.Model):
     reference = fields.Char(string="Reference")
     originator = fields.Char(string="Originator")
     title = fields.Char(string="Title")
-    expenditure_amount = fields.Monetary(currency_field='company_currency_id',
+    expenditure_amount = fields.Monetary(currency_field='currency_id',
                                          string='Expenditure Amount')
     justification = fields.Text(string="Justification")
     purchase_order = fields.Char(string="Purchase Order")
@@ -39,7 +39,7 @@ class Oear(models.Model):
 
     # RELATIONSHIPS
     # ----------------------------------------------------------
-    company_currency_id = fields.Many2one('res.currency', readonly=True,
+    currency_id = fields.Many2one('res.currency', readonly=True,
                                           default=lambda self: self.env.user.company_id.currency_id)
 
     operation_id = fields.Many2one('budget.core.budget',
